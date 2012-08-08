@@ -3,3 +3,10 @@ version: 1.0
 author: hammale
 main: me.hammale.perk.perk
 depend: [Essentials]
+commands:
+    buyperk:
+        description: Use this command to buy perks
+        usage: /buyperk
+    perks:
+        description: Use this command to view perks
+        usage: /perks
