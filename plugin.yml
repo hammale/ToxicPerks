@@ -1,0 +1,5 @@
+name: ToxicPerks
+version: 1.0
+author: hammale
+main: me.hammale.perk.perk
+depend: [Essentials]
