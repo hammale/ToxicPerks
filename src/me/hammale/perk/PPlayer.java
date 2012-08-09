@@ -15,7 +15,12 @@ public class PPlayer {
 	
 	public PPlayer(perk plugin, Player p){
 		this.p = p;
-		this.plugin = plugin;	
+		this.plugin = plugin;
+		if(ints.size() == 0){
+			if(plugin.hasIds(p)){
+				ints = plugin.getIds(p);
+			}
+		}
 	}
 	
 	public Player getPlayer(){
@@ -31,6 +36,8 @@ public class PPlayer {
 				return false;
 			}
 			Economy.subtract(p.getName(), amnt);
+			ints.add(id);
+			plugin.saveChanges(p);
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
